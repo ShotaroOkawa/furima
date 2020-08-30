@@ -31,7 +31,7 @@
     <% unless Purchase.exists?(item_id: @item.id)%>
       <% if user_signed_in? %>
         <% if current_user.id != @item.user_id %>
-          <%= link_to '購入画面に進む', item_item_managements_path(@item),class:"item-red-btn"%>
+          <%= link_to '購入画面に進む', item_purchases_path(@item),class:"item-red-btn"%>
         <% end %>
       <% elsif %>
        <%= link_to '購入画面に進む', new_user_session_path, class:"item-red-btn"%>
