@@ -62,6 +62,5 @@ RSpec.describe PurchaseAddress, type: :model do
       @purchase_address.building_name = ''
       expect(@purchase_address).to be_valid
     end
-
   end
 end
